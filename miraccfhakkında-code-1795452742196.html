@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miraç Dursun | Motorcu & Muhasebe Öğrencisi</title>
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --card: #ffffff;
+      --text: #18181b;
+      --muted: #52525b;
+      --accent: #d92626;
+      --border: #e4e4e7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Üst Kapak (Hero) Alanı */
+    header {
+      position: relative;
+      height: 360px;
+      background: linear-gradient(rgba(15, 15, 20, 0.62), rgba(15, 15, 20, 0.78)),
+        url("https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .hero-content {
+      max-width: 680px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #e4e4e7;
+    }
+
+    /* Ana İçerik */
+    main {
+      max-width: 920px;
+      margin: -40px auto 3rem;
+      padding: 0 1.25rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .about-text {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    /* Kısa Bilgi Kartları */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .info-box {
+      background: var(--bg);
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .info-box span {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .info-box strong {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    /* İlgi Alanları ve Görsel Galeri */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .visual-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--card);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .visual-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .visual-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .visual-card-body {
+      padding: 1.15rem;
+    }
+
+    .visual-card-body h3 {
+      font-size: 1.08rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .visual-card-body p {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    /* Alt Bilgi */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        height: 300px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero-content">
+      <span class="badge">Motorcu</span>
+      <h1>Miraç Dursun</h1>
+      <p>Motor ve otomobil tutkunu • Muhasebe öğrencisi</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hakkımda Bölümü -->
+    <section class="card">
+      <h2>Hakkımda</h2>
+      <p class="about-text">
+        Merhaba, ben Miraç Dursun. 19 Temmuz 2009 doğumluyum. Şu anda muhasebe alanında eğitimime devam ediyorum.
+        Günlük hayatımda en büyük tutkum motosikletler ve arabalar; mekanik dünyayı yakından takip etmeyi,
+        araçları incelemeyi ve iki teker kültürünün içinde olmayı seviyorum.
+      </p>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <span>Unvan</span>
+          <strong>Motorcu</strong>
+        </div>
+        <div class="info-box">
+          <span>Doğum Tarihi</span>
+          <strong>19.07.2009</strong>
+        </div>
+        <div class="info-box">
+          <span>Eğitim</span>
+          <strong>Muhasebe Öğrencisi</strong>
+        </div>
+        <div class="info-box">
+          <span>Tutkular</span>
+          <strong>Motosiklet & Otomobil</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- İlgi Alanları ve Görseller -->
+    <section class="card">
+      <h2>İlgi Alanlarım</h2>
+      <div class="gallery-grid">
+        <div class="visual-card">
+          <img
+            src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80"
+            alt="Motosiklet Tutkusu"
+          />
+          <div class="visual-card-body">
+            <h3>Motosikletler</h3>
+            <p>Motor modelleri, sürüş kültürü, bakım detayları ve iki teker özgürlüğü.</p>
+          </div>
+        </div>
+
+        <div class="visual-card">
+          <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Otomobil Tutkusu"
+          />
+          <div class="visual-card-body">
+            <h3>Arabalar</h3>
+            <p>Otomobil tasarımları, performans dünyası ve araç teknolojilerine merak.</p>
+          </div>
+        </div>
+
+        <div class="visual-card">
+          <img
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80"
+            alt="Muhasebe Eğitimi"
+          />
+          <div class="visual-card-body">
+            <h3>Muhasebe Eğitimi</h3>
+            <p>Finansal okuryazarlık, kayıt düzeni ve iş dünyasının temel dinamikleri üzerine eğitim.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Miraç Dursun • Kişisel Tanıtım Sayfası
+  </footer>
+
+</body>
+</html>
